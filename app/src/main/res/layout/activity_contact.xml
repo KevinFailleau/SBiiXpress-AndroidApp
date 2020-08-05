@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_contact"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ContactActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/banniere"
+        android:layout_alignParentTop="true"
+        android:id="@+id/imageView"
+        android:adjustViewBounds="true" />
+
+    <EditText
+        android:inputType="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En cas de besoins, vous pouvez nous contacter par les moyens suivants :"
+        android:ems="10"
+        android:layout_marginTop="23dp"
+        android:id="@+id/editTextContact"
+        android:textAlignment="center"
+        android:selectAllOnFocus="false"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:background="#00000000"/>
+
+    <TextView
+        android:text="Bureau :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextContact"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="27dp"
+        android:id="@+id/textViewBureau"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="Portable :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBureau"
+        android:layout_alignStart="@+id/textViewBureau"
+        android:layout_marginTop="56dp"
+        android:id="@+id/textViewPortable"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="02 44 02 39 42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textViewNumBureau"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/textViewBureau"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:onClick="btnBureau"
+        android:clickable="true" />
+
+    <TextView
+        android:text="06 41 61 98 79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPortable"
+        android:layout_alignStart="@+id/textViewNumBureau"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textViewNumPortable"
+        android:textColor="@color/colorPrimary"
+        android:onClick="btnPortable"
+        android:clickable="true" />
+
+    <TextView
+        android:text="Envoyer un SMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewNumPortable"
+        android:layout_alignStart="@+id/textViewMail"
+        android:id="@+id/textViewSMS"
+        android:textColor="@color/colorPrimary"
+        android:onClick="btnSMS"
+        android:clickable="true" />
+
+    <TextView
+        android:text="Envoyer un mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="46dp"
+        android:id="@+id/textViewMail"
+        android:textColor="@color/colorPrimary"
+        android:onClick="btnMail"
+        android:clickable="true"
+        android:layout_alignBaseline="@+id/textViewNumBureau"
+        android:layout_alignBottom="@+id/textViewNumBureau"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
